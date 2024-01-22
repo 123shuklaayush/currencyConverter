@@ -20,8 +20,10 @@ function App() {
   }
 
   const convert = () => {
-    setConvertedAmount(amount * currencyInfo[to])
-  }
+    const result = amount * currencyInfo[to];
+    setConvertedAmount(parseFloat(result.toFixed(2)));
+  };
+  
 
   return (
     <div
